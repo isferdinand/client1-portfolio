@@ -1,0 +1,325 @@
+@import 'variables';
+@import 'utilities';
+@import 'mywork';
+
+// General (core) styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+  line-height: 1.5;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+// Heading
+#home {
+  &-header {
+    background: $bg-image no-repeat center right / cover;
+    height: 100vh;
+    color: #fff;
+  }
+}
+
+.home-content {
+  padding-top: 20%;
+  text-align: center;
+  h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+}
+
+//About Page
+#about {
+  &-header {
+    background: $bg-image no-repeat 20% 30% / cover;
+    border-bottom: 3px solid $primary-color;
+    height: 11.5vh;
+    color: #fff;
+  }
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    border-bottom: 2px solid transparent;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $medium-color;
+    }
+
+    &.current {
+      border-color: $primary-color;
+    }
+  }
+}
+
+// Logo
+#logo {
+  width: 70px;
+  height: 70px;
+}
+
+//Specialize Section
+#specialize {
+  .specials {
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .fas {
+    color: $primary-color;
+    padding-bottom: 0.5rem;
+  }
+}
+
+// Statistics section
+#statistics {
+  .stats {
+    gap: 2rem;
+
+    li {
+      line-height: 2;
+    }
+
+    .stats-title {
+      font-size: 1.4rem;
+    }
+
+    .stats-number {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    & > div {
+      padding: 2rem 0;
+
+      &:nth-child(odd) {
+        background: $medium-color;
+      }
+    }
+  }
+}
+
+//Creativity section
+#creativity {
+  .process {
+    gap: 1.4rem;
+
+    &-icon {
+      position: relative;
+      border-radius: 50%;
+      background: $dark-color;
+      color: set-text-color($dark-color);
+      padding: 1rem;
+      width: 100px;
+      height: 100px;
+      transition: all 1s;
+
+      &:hover {
+        background: $primary-color;
+        width: 120px;
+        height: 120px;
+
+        .process-step {
+          background: $dark-color;
+        }
+      }
+    }
+
+    &-step {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: $primary-color;
+      font-size: 22px;
+      border-radius: 50%;
+      padding: 0.5rem;
+      height: 34px;
+      width: 34px;
+      transition: all 1s;
+    }
+  }
+}
+
+//About Page
+#about {
+  .about-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .bio {
+    grid-column: 2 / span 2;
+    border-left: 3px solid $primary-color;
+  }
+
+  div[class^='award-'] .fas {
+    color: $primary-color;
+    margin: 1rem;
+  }
+}
+
+#skills {
+  h4 {
+    text-align: left;
+  }
+  .progress {
+    background: $medium-color;
+    border-radius: 10px;
+    height: 20px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+
+    div {
+      background: $primary-color;
+      height: 100%;
+    }
+  }
+}
+
+#tech {
+  .tech-logos {
+    gap: 3rem;
+
+    img {
+      width: 70%;
+    }
+  }
+}
+
+#testimonials {
+  .testimonies {
+    gap: 0.6rem;
+    p {
+      border: 1px solid $medium-color;
+      border-radius: 5px;
+      padding: 0.5rem;
+    }
+
+    img {
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+    }
+  }
+}
+
+//The contact page
+#contact {
+  .contact-form {
+    display: grid;
+    place-content: center;
+  }
+
+  label,
+  input {
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  input {
+    padding: 0.5rem 1.2rem;
+    border: 1px solid #777;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  button[type='submit'] {
+    margin-bottom: 1rem;
+  }
+}
+
+#contact-info {
+  .myinfo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+}
+
+.end {
+  p {
+    font-size: 2rem;
+  }
+  button[type='button'] {
+    background-color: $primary-color;
+    color: $medium-color;
+    margin-top: 0.6rem;
+  }
+}
+
+//Footer
+#main-footer {
+  background: $dark-color;
+  color: #fff;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+
+    .socials .fab {
+      border: 2px solid #fff;
+      border-radius: 50%;
+      margin-right: 1rem;
+      padding: 0.5rem;
+      text-align: center;
+
+      &:hover {
+        background: $primary-color;
+        transition: all 1s;
+      }
+    }
+  }
+}
+
+//Media Queries
+@import 'media';

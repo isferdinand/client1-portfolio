@@ -1,0 +1,136 @@
+//container
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+// Buttons
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: #333;
+    background: $primary-color;
+  }
+
+  &-light {
+    @extend %btn-shared;
+    color: #333;
+    background: #f4f4f4;
+  }
+
+  &-dark {
+    @extend %btn-shared;
+    color: #fff;
+    background: #333;
+  }
+
+  &:hover {
+    background: $primary-color;
+    color: $light-color;
+  }
+}
+
+/*  // Any button with the the class of btn- this is somehow not functioning
+button[class^='btn- ']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background-color: $primary-color;
+} */
+
+.bg {
+  &-main {
+    background: $primary-color;
+    color: set-text-color($primary-color);
+  }
+  &-dark {
+    background: $dark-color;
+    color: set-text-color($dark-color);
+  }
+  &-light {
+    background: $light-color;
+    color: set-text-color($light-color);
+  }
+}
+
+.lead {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+//Padding Classes
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+
+  &-2 {
+    padding: 2rem 0;
+  }
+
+  &-3 {
+    padding: 3rem 0;
+  }
+
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+
+//Margin
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+
+  &-2 {
+    margin: 2rem 0;
+  }
+
+  &-3 {
+    margin: 3rem 0;
+  }
+
+  &-4 {
+    margin: 4rem 0;
+  }
+}
+
+.section-title {
+  display: block;
+  font-size: 2rem;
+  font-weight: 100;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+.bottom-line {
+  background: $primary-color;
+  margin: 0 auto 1rem auto;
+  width: 10%;
+  height: 3px;
+}
+
+.grid-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
